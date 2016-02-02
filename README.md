@@ -6,7 +6,7 @@
 
 ## 提供以下支持：
 
-* DOM层于数据双向绑定(vue.js、React、bird.js) v1
+* DOM层和数据交换(vue.js、React、bird.js) v1
 * 常用布局 (flex-box) v2
 * 常用Css组件 （GCSS） v1
 * 常用Js组件  （GCSS） v1
