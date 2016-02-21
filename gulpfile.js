@@ -1,3 +1,9 @@
+/**
+* Dev: gulp dev
+* Release: gulp build
+* Release code: ./dist
+**/
+
 var gulp = require('gulp');
 var webpack = require('webpack');
 var webpackDevServer = require("webpack-dev-server");
