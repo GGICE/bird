@@ -2,11 +2,11 @@
 
 ## 进度
 
-* v1 doing 
+* v1 doing
 
 ## 提供以下支持：
 
-* DOM层和数据交换(vue.js、React、bird.js) v1
+* DOM层和数据交换(vue.js、~~React、bird.js~~) v1
 * 常用布局 (flex-box) v2
 * 常用Css组件 （GCSS） v1
 * 常用Js组件  （GCSS） v1
@@ -16,14 +16,7 @@
 
 ## 主要依赖
 
-  * vue.js、 React、 bird.js
+  * vue.js、~~React、 bird.js~~
   * GCSS
   * webpack
   * gulp
-  
-
-
-
-  
-
-
