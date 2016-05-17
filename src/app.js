@@ -2,7 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { render } from 'react-dom'
 import { Router, Route, Link, browserHistory } from 'react-router'
+import { createStore } from 'redux'
+import { Provider, connect} from 'react-redux'
 import Hello from './components/hello.jsx'
+import HelloRedux from './reducers/hello.js'
+  
+let store = createStore(HelloRedux)
   
 const App = React.createClass({
   render() {
@@ -17,9 +22,11 @@ const App = React.createClass({
 })
 
 render((
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <Route path="/hello" component={Hello}/>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <Route path="/hello" component={Hello}/>
+      </Route>
+    </Router>
+  </Provider>
   ), document.getElementById('content'))
