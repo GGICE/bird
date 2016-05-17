@@ -9,14 +9,16 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.vue$/, loader: 'vue-loader'}
+      {
+        test: /.(jsx|js)?$/,
+        include: path.join(__dirname, 'src'),
+        loaders: ['react-hot', 'babel-loader']
+      }
     ]
   },
+  devServer: {
+      historyApiFallback: true
+  },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    })
   ]
 };

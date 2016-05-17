@@ -11,8 +11,8 @@ var gutil = require("gulp-util");
 var config = require('./webpack.config');
 
 function buildAll() {
-    gulp.src('./index.html')
-      .pipe(gulp.dest('./dist'));
+  gulp.src('./index.html')
+    .pipe(gulp.dest('./dist'));
 }
 
 gulp.task('build', function() {
@@ -36,10 +36,10 @@ gulp.task('dev', function(callback) {
     stats: {
       colors: true
     }
-  }).listen('9200', 'localhost', function(err) {
+  }).listen('9500', 'localhost', function(err) {
     if (err) {
       throw new gutil.PluginError('webpack-dev-server', err);
     }
-    gutil.log('[webpack-dev-server]', 'http://localhost:9200/webpack-dev-server/index.html');
+    gutil.log('[webpack-dev-server]', 'http://localhost:9500/webpack-dev-server/');
   });
 });
