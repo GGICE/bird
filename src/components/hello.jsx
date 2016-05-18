@@ -1,7 +1,7 @@
 import React,{PropTypes} from 'react'
 import { Provider, connect} from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as helloActions from '../actions/hello'
+import * as helloActions from '../actions/'
  
 const hello = React.createClass({
   render() {
@@ -14,7 +14,7 @@ const hello = React.createClass({
     )
   },
   handleClick() {
-    this.props.actions.buttonClick()
+    this.props.actions.buttonClick('click')
   } 
 })
 

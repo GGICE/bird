@@ -5,9 +5,9 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 import { createStore } from 'redux'
 import { Provider, connect} from 'react-redux'
 import Hello from './components/hello.jsx'
-import HelloRedux from './reducers/hello.js'
+import Reduxs from './reducers/'
   
-let store = createStore(HelloRedux)
+let store = createStore(Reduxs)
   
 const App = React.createClass({
   render() {
@@ -29,4 +29,8 @@ render((
       </Route>
     </Router>
   </Provider>
-  ), document.getElementById('content'))
+), document.getElementById('content'))
+
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+)
