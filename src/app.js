@@ -6,6 +6,7 @@ import { createStore } from 'redux'
 import { Provider, connect} from 'react-redux'
 import Main from './components/main.jsx'
 import Reduxs from './reducers/'
+import './styles/main.sass'
   
 let store = createStore(Reduxs)
   
