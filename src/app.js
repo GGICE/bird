@@ -5,11 +5,11 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 import { createStore } from 'redux'
 import { Provider, connect} from 'react-redux'
 import Main from './components/main.jsx'
-import Reduxs from './reducers/'
+import configureStore from './store/configureStore'
 import './styles/main.sass'
-  
-let store = createStore(Reduxs)
-  
+
+let store = configureStore()
+
 const App = React.createClass({
   render() {
     return (

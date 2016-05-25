@@ -1,5 +1,5 @@
 import React from 'react'
- 
+
 const hello = React.createClass({
   render() {
     return (
@@ -12,7 +12,7 @@ const hello = React.createClass({
   },
   handleClick() {
     this.props.actions.buttonClick('click')
-  } 
+  }
 })
 
 export default hello

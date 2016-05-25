@@ -17,6 +17,11 @@ function buildAll() {
 
 gulp.task('build', function() {
   var myConfig = Object.create(config);
+
+  myConfig.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify('production')
+  }))
   webpack(myConfig, function(err, stats) {
     if (err) throw new gutil.PluginError("build", err);
     gutil.log("[build]", stats.toString({
@@ -29,13 +34,21 @@ gulp.task('build', function() {
 gulp.task('dev', function(callback) {
   var myConfig = Object.create(config);
 
-  myConfig.devtool = 'eval';
+  myConfig.devtool = ['eval', 'source-map'];
   myConfig.debug = true;
+  myConfig.entry.push( 'webpack-dev-server/client?http://localhost:9500', // WebpackDevServer host and port
+    'webpack/hot/only-dev-server'// "only" prevents reload on syntax errors
+  )
+  myConfig.plugins.push(new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify('dev')
+  }))
 
   new webpackDevServer(webpack(myConfig), {
     stats: {
       colors: true
-    }
+    },
+    hot: true
   }).listen('9500', 'localhost', function(err) {
     if (err) {
       throw new gutil.PluginError('webpack-dev-server', err);
