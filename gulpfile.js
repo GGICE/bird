@@ -7,7 +7,7 @@
 var gulp = require('gulp');
 var webpack = require('webpack');
 var webpackDevServer = require('webpack-dev-server');
-var gutil = require("gulp-util");
+var gutil = require('gulp-util');
 var config = require('./webpack.config');
 
 function buildAll() {
