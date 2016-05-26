@@ -20,8 +20,10 @@ gulp.task('build', function() {
 
   myConfig.plugins.push(
     new webpack.DefinePlugin({
-      'process.env': JSON.stringify('production')
-  }))
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+    }}) 
+  )
   webpack(myConfig, function(err, stats) {
     if (err) throw new gutil.PluginError("build", err);
     gutil.log("[build]", stats.toString({
