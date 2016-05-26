@@ -6,7 +6,7 @@
 
 var gulp = require('gulp');
 var webpack = require('webpack');
-var webpackDevServer = require("webpack-dev-server");
+var webpackDevServer = require('webpack-dev-server');
 var gutil = require("gulp-util");
 var config = require('./webpack.config');
 
@@ -25,8 +25,8 @@ gulp.task('build', function() {
     }}) 
   )
   webpack(myConfig, function(err, stats) {
-    if (err) throw new gutil.PluginError("build", err);
-    gutil.log("[build]", stats.toString({
+    if (err) throw new gutil.PluginError('build', err);
+    gutil.log('[build]', stats.toString({
       colors: true
     }));
     buildAll();
