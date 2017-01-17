@@ -1,4 +1,4 @@
-网页应用（pc、web、android、ios）的开始, 造轮子玩，Funny！
+网页应用（pc、web、android、ios）的开始, 基础库支撑！
 
 ## 进度
 
@@ -15,17 +15,18 @@
 
 ## 计划提供以下支持：
 
-* DOM层和数据交换(vue.js 、React、bird.js~~) v1
-* 常用布局 (flex-box) v2
+* MVC(vue.js 、React、bird.js) v1
+* 常用布局 (flex-box) v1
 * 常用Css组件 （GCSS） v1
 * 常用Js组件  （GCSS） v1
+* 基础动画库 V1
 * 常用方法支持 v2
 * 代码规范 v3
 * 最佳实践 v3
 
 ## 主要依赖
 
-  * vue.js、React、 bird.js~~
+  * vue.js、React、 bird.js
   * GCSS
   * webpack
-  * gulp
+  * gulp //TODO 移除
