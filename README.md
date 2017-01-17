@@ -18,7 +18,7 @@
 * MVC(vue.js 、React、bird.js) v1
 * 常用布局 (flex-box) v1
 * 常用Css组件 （GCSS） v1
-* 常用Js组件  （GCSS） v1
+* 常用Js组件  （GJS） v1
 * 基础动画库 V1
 * 常用方法支持 v2
 * 代码规范 v3
